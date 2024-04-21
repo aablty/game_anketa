@@ -1,0 +1,7 @@
+gamesdict = {
+     "Любые игры": None,
+     "Valorant": "https://sun1-47.userapi.com/s/v1/ig2/WZMr2_80kgWl-Fx7yXy4SN_F9srciqagGC5KSJI4tCKSSuNOww9NxVOXGoh4rbn7ZH3TWrLswLt6sHUnaC1AZU8y.jpg?size=841x841&quality=96&crop=29,29,841,841&ava=1",
+     "Fortnite": "https://sun9-39.userapi.com/impg/iAihgdPuIwoFe2sTXQexzxtAo-o-toKdFpVNyg/lh8god1e2_A.jpg?size=900x900&quality=96&sign=13655807574dc731c37390bff1574858&c_uniq_tag=z5gvGWcfWlKTFkP46BRPLBLw_sSySbhPRXinAS8rMJg&type=album",
+     "GTA V": "https://i.ytimg.com/vi/vnDAgY0B-14/sddefault.jpg",
+     "Dead by Daylight": "https://i.artfile.me/wallpaper/16-01-2012/800x600/zhivotnye-sobaki-haski-sobaka-602820.jpg"
+}
