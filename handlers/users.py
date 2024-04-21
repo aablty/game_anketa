@@ -17,15 +17,20 @@ from geopy.geocoders import Nominatim
 from database.db import Base
 from handlers.states import *
 from keyboards import reply
-from tmp.gamesdict import gamesdict
 
 import random
+import json
 
 router = Router()
 geolocator = Nominatim(user_agent="GeoCode")
 
 menu_main_text = '1. Смотреть анкеты\n2. Моя анкета\n3. Отключить анкету'
 my_anketa_text = '1. Заполнить анкету заново\n2. Изменить текст анкеты\n3. Изменить фото\n4. Вернутся назад'
+
+
+with open('./tmp/gamesdict.json', 'r', encoding='utf-8') as file:
+    gamesdict = json.load(file)
+
 
 def games_text(me):
      return (f"Выберите интересующие вас 1-3 игры. Введите @{me} "
