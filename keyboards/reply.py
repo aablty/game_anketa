@@ -1,65 +1,26 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
-main = ReplyKeyboardMarkup(
-     keyboard = [
-          [
-               KeyboardButton(text="1"),
-               KeyboardButton(text="2"),
-               KeyboardButton(text="3")
-          ]
-     ],
-     resize_keyboard=True
-)
+def kbs(button_text):
+     return ReplyKeyboardMarkup(
+          keyboard=[[
+               KeyboardButton(text=button_text)
+          ]],
+          resize_keyboard=True
+     )
+
+confirm, skip, empty = kbs("Продолжить"), kbs("Пропустить"), kbs("Оставить пустым")
 
 
 
-gender = ReplyKeyboardMarkup(
-     keyboard = [
-          [
-               KeyboardButton(text="Я парень"),
-               KeyboardButton(text="Я девушка")
-          ]
-     ],
-     resize_keyboard=True
-)
+def reacts():
+     keyboard=[]
+     for e in ["❤️", "💌|📷", "👎", "✖️"]:
+          keyboard.append(
+               KeyboardButton(text=e)
+          )
 
-
-
-interest_gender = ReplyKeyboardMarkup(
-     keyboard = [
-          [
-               KeyboardButton(text="Парни"),
-               KeyboardButton(text="Девушки"),
-               KeyboardButton(text="Все равно")
-          ]
-     ],
-     resize_keyboard=True
-)
-
-confirm = ReplyKeyboardMarkup(
-     keyboard= [
-          [
-               KeyboardButton(text="Продолжить")
-          ]
-     ],
-     resize_keyboard=True
-)
-
-def geoloc(town: str = None):
-     keyboard= []
-     keyboard.append([KeyboardButton(text=town)]) if town else None
-     keyboard.append([KeyboardButton(text="Отправить мои координаты", request_location=True)])
-
-     geoloc = ReplyKeyboardMarkup(keyboard = keyboard, resize_keyboard=True)
-     return geoloc
-
-
-skip = ReplyKeyboardMarkup(
-     keyboard= [
-          [
-               KeyboardButton(text="Пропустить")
-          ]
-     ],
-     resize_keyboard=True
-)
+     return ReplyKeyboardMarkup(
+          keyboard=[keyboard],
+          resize_keyboard=True
+     )
